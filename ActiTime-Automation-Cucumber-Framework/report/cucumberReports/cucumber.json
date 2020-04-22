@@ -1,0 +1,107 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Login to ActiTime Application",
+        "description": "",
+        "id": "login-to-actitime-application-and-validate-enter-time-track-heading-should-be-available;login-to-actitime-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5973105994,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I want Login to the application",
+            "match": {
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 153916415,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Provide valid userName and passWord",
+            "match": {
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_Provide_valid_userName_and_passWord(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Admin",
+                  "manager"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 89658790,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I want to click on \"Login\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login",
+                  "offset": 20
+                }
+              ],
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 596875694,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I validate \"Enter Time-Track\" Text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Enter Time-Track",
+                  "offset": 12
+                }
+              ],
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@SmokeTest"
+          },
+          {
+            "line": 4,
+            "name": "@RegrassionTest"
+          }
+        ]
+      }
+    ],
+    "name": "Login to ActiTime Application and Validate Enter Time-Track heading should be available",
+    "description": "",
+    "id": "login-to-actitime-application-and-validate-enter-time-track-heading-should-be-available",
+    "keyword": "Feature",
+    "uri": "Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@FunctionalTest"
+      }
+    ]
+  }
+]

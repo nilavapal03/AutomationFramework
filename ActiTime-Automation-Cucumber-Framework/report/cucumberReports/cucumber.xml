@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.813557">
+<testcase classname="Login to ActiTime Application and Validate Enter Time-Track heading should be available" name="Login to ActiTime Application" time="6.813557">
+<system-out><![CDATA[Given I want Login to the application.......................................passed
+And I Provide valid userName and passWord...................................passed
+Then I want to click on "Login" button......................................passed
+And I validate "Enter Time-Track" Text......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
