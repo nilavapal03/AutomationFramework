@@ -89,3 +89,43 @@
 04-22-2020 18:34:19 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
 04-22-2020 18:34:19 Driver.java INFO  [main] GenericUtils.Driver 42 - INFO Msg:=====================> Launching Chrome browser
 04-22-2020 18:34:24 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 18:49:53 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 18:49:53 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 18:49:53 Driver.java INFO  [main] GenericUtils.Driver 42 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 18:49:58 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:23:36 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:23:36 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:23:36 Driver.java INFO  [main] GenericUtils.Driver 42 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:23:44 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:30:00 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:30:00 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:30:00 Driver.java INFO  [main] GenericUtils.Driver 42 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:30:07 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:43:02 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:43:02 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:43:02 Driver.java INFO  [main] GenericUtils.Driver 42 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:43:07 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:44:48 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:44:48 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:44:48 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:44:53 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:51:57 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:51:57 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:51:57 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:52:06 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 19:56:06 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 19:56:06 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 19:56:06 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 19:56:12 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 20:08:08 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 20:08:08 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 20:08:08 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 20:08:16 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 20:08:49 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 20:08:49 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 20:08:49 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 20:08:56 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application
+04-22-2020 20:10:55 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 32 - INFO Msg:===============> Loading peropeties file
+04-22-2020 20:10:55 Driver.java INFO  [main] GenericUtils.Driver 31 - INFO Msg:=====================>Loading Properties file
+04-22-2020 20:10:55 Driver.java INFO  [main] GenericUtils.Driver 43 - INFO Msg:=====================> Launching Chrome browser
+04-22-2020 20:10:59 Login_ActiTime_And_Validate_EnterTimeTrackStep.java INFO  [main] StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep 46 - INFO Msg:===============>Launch AtiTime application

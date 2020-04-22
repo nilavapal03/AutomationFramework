@@ -39,8 +39,9 @@ public class Driver{
 		switch (browser) {
 		case "Chrome" :
 			try {
-			logger.info("INFO Msg:=====================> Launching Chrome browser");
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+			logger.info("INFO Msg:=====================> Launching Chrome browser");
+			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("Chrome"));
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
