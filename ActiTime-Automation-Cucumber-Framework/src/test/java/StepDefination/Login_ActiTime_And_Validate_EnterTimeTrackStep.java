@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -52,6 +53,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	public void i_Provide_valid_userName_and_passWord(DataTable dt) throws Throwable {
 	  List<String> list= dt.asList(String.class);
 	  Driver.driver.findElement(By.id("username")).sendKeys(list.get(0));
+	  Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  Driver.driver.findElement(By.name("pwd")).sendKeys(list.get(1));
 	}
 
@@ -60,6 +62,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	String value=Driver.driver.findElement(By.xpath("//div[text()='Login ']")).getText();
 	if(Login.equals(value)) {
 		Driver.driver.findElement(By.xpath("//div[text()='Login ']")).click();
+		 Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 		
@@ -67,6 +70,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 
 	@And("^I validate \"([^\"]*)\" Text$")
 	public void i_validate_Text(String text) throws Throwable {
+		 Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    Driver.driver.quit();
 	}
 
