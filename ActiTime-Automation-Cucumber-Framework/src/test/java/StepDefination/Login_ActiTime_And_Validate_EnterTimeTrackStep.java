@@ -68,11 +68,11 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 		
 	}
 
-//	@And("^I validate \"([^\"]*)\" Text$")
-//	public void i_validate_Text(String text) throws Throwable {
-//		 Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-//	    Driver.driver.quit();
-//	}
+	@And("^I validate \"([^\"]*)\" Text$")
+	public void i_validate_Text(String text) throws Throwable {
+		 Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    Driver.driver.quit();
+	}
 
 
 }
