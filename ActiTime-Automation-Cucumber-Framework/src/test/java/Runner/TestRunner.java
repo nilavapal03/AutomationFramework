@@ -15,10 +15,4 @@ format= {"pretty","html:./report/cucumberReports",
 public class TestRunner {
 	
 	
-	@Test
-	public void setUp() {
-		System.out.println("hello");
-	}
-	
-
 }

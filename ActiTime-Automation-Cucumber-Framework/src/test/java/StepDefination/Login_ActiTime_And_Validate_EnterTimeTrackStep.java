@@ -28,7 +28,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	{
 		
 		try {
-			PropertyConfigurator.configure("./resourceLib/configuration/configFile.properties");
+			PropertyConfigurator.configure("./resourceLib/configuration/log4j.properties");
 			logger.info("INFO Msg:===============> Loading peropeties file");
 			prop.load(new FileInputStream(new File("./resourceLib/configuration/configFile.properties")));
 		} catch (IOException e) {
@@ -41,6 +41,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	@Given("^I want Login to the application$")
 	public void i_want_Login_to_the_application() throws Throwable {
 		Driver.selectBrowser(prop.getProperty("ch"));
+		Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		try {
 			logger.info("INFO Msg:===============>Launch AtiTime application");
 		Driver.driver.get(prop.getProperty("actiTime_URL"));
