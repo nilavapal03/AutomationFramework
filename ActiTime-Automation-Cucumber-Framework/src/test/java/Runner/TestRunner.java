@@ -1,5 +1,6 @@
 package Runner;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -13,6 +14,11 @@ format= {"pretty","html:./report/cucumberReports",
 
 public class TestRunner {
 	
+	
+	@Test
+	public void setUp() {
+		System.out.println("hello");
+	}
 	
 
 }
