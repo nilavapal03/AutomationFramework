@@ -70,8 +70,11 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 
 	@And("^I validate \"([^\"]*)\" Text$")
 	public void i_validate_Text(String text) throws Throwable {
-		 Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    Driver.driver.quit();
+		 String pageTitle_text= Driver.driver.findElement(By.xpath("//td[contains(text(),'Enter Time-Track')]")).getText();
+		 if(pageTitle_text.equalsIgnoreCase(text)) {
+			 Driver.driver.findElement(By.linkText("Logout")).click();
+		 }
+		 Driver.driver.quit();
 	}
 
 
