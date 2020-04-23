@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -276,5 +277,7 @@ public class CommonUtils {
 //		Driver.driver.switchTo().defaultContent();
 		}
 		
-	
+	public void implicitWait(int i) {
+		Driver.driver.manage().timeouts().implicitlyWait(i*10, TimeUnit.SECONDS);
+	}
 }

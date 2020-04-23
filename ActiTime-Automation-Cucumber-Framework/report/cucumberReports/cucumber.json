@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9036326288,
+              "duration": 8988551081,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 152082929,
+              "duration": 301458064,
               "status": "passed"
             },
             "line": 7,
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 100152086,
+              "duration": 113386334,
               "status": "passed"
             },
             "line": 9,
@@ -63,7 +63,7 @@
           },
           {
             "result": {
-              "duration": 5390002949,
+              "duration": 1432042053,
               "status": "passed"
             },
             "line": 10,
@@ -76,6 +76,36 @@
                 }
               ],
               "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5473773667,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate \"Create New Tasks\" Textfield",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Create New Tasks",
+                  "offset": 12
+                }
+              ],
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Textfield(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 795852022,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I logout the application",
+            "match": {
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_logout_the_application()"
             },
             "keyword": "And "
           }

@@ -59,18 +59,28 @@ formatter.step({
   "name": "I validate \"Enter Time-Track\" Text",
   "keyword": "And "
 });
+formatter.step({
+  "line": 11,
+  "name": "I validate \"Create New Tasks\" Textfield",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "I logout the application",
+  "keyword": "And "
+});
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
 });
 formatter.result({
-  "duration": 9036326288,
+  "duration": 8988551081,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_Provide_valid_userName_and_passWord(DataTable)"
 });
 formatter.result({
-  "duration": 152082929,
+  "duration": 301458064,
   "status": "passed"
 });
 formatter.match({
@@ -83,7 +93,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
 });
 formatter.result({
-  "duration": 100152086,
+  "duration": 113386334,
   "status": "passed"
 });
 formatter.match({
@@ -96,7 +106,27 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
 });
 formatter.result({
-  "duration": 5390002949,
+  "duration": 1432042053,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Create New Tasks",
+      "offset": 12
+    }
+  ],
+  "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Textfield(String)"
+});
+formatter.result({
+  "duration": 5473773667,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_logout_the_application()"
+});
+formatter.result({
+  "duration": 795852022,
   "status": "passed"
 });
 });
