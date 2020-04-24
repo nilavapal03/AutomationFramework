@@ -27,6 +27,15 @@
 
 		</dependency>
 
+
+		<!--webdriver manager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+
 		<!-- Selenium webdriver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -36,12 +45,8 @@
 
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<!--<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.1.0</version>
-
-		</dependency>-->
+		<!--<dependency> <groupId>org.testng</groupId> <artifactId>testng</artifactId> 
+			<version>7.1.0</version> </dependency> -->
 
 		<!-- ##############################START CUCUMBER POM DEPENDENCY ################################## -->
 
@@ -212,7 +217,7 @@
 						<include>**/*Runner.java</include>
 					</includes>
 				</configuration>
-				
+
 			</plugin>
 
 		</plugins>

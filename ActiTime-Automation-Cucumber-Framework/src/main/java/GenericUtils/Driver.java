@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 /**
  * 
  * @author nilava
@@ -41,8 +43,7 @@ public class Driver{
 			try {
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 			logger.info("INFO Msg:=====================> Launching Chrome browser");
-			
-			System.setProperty("webdriver.chrome.driver", prop.getProperty("Chrome"));
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -55,7 +56,7 @@ public class Driver{
 		case "Firefox" :
 			try {
 			logger.info("INFO Msg:=====================> Launching Firefox browser");
-			System.setProperty("webdriver.gecko.driver", prop.getProperty("Firefox"));
+			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -67,7 +68,7 @@ public class Driver{
 		case "IE" :
 			try {
 			logger.info("INFO Msg:=====================> Launching IE browser");
-			System.setProperty("webdriver.ie.driver", prop.getProperty("IE"));
+			WebDriverManager.iedriver().setup();
 			driver=new InternetExplorerDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
