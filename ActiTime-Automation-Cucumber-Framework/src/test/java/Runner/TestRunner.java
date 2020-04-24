@@ -1,11 +1,22 @@
 package Runner;
 
-import org.apache.log4j.Logger;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
-import StepDefination.Login_ActiTime_And_Validate_EnterTimeTrackStep;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import GenericUtils.Driver;
 import cucumber.api.CucumberOptions;
+import cucumber.api.Scenario;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
@@ -17,5 +28,6 @@ format= {"pretty","html:./report/cucumberReports",
 public class TestRunner {
 	public static  Logger logger= Logger.getLogger(TestRunner.class);
 	
+		
 }
 

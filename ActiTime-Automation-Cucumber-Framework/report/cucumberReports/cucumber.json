@@ -3,19 +3,41 @@
     "line": 2,
     "elements": [
       {
-        "line": 5,
+        "before": [
+          {
+            "result": {
+              "duration": 5226717118,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 7,
         "name": "Login to ActiTime Application",
         "description": "",
         "id": "login-to-actitime-application-and-validate-enter-time-track-heading-should-be-available;login-to-actitime-application",
+        "after": [
+          {
+            "result": {
+              "duration": 1675208,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 8988551081,
+              "duration": 1371302474,
               "status": "passed"
             },
-            "line": 6,
+            "line": 8,
             "name": "I want Login to the application",
             "match": {
               "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
@@ -24,10 +46,10 @@
           },
           {
             "result": {
-              "duration": 301458064,
+              "duration": 203534199,
               "status": "passed"
             },
-            "line": 7,
+            "line": 9,
             "name": "I Provide valid userName and passWord",
             "match": {
               "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_Provide_valid_userName_and_passWord(DataTable)"
@@ -38,17 +60,17 @@
                   "Admin",
                   "manager"
                 ],
-                "line": 8
+                "line": 10
               }
             ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 113386334,
+              "duration": 95377903,
               "status": "passed"
             },
-            "line": 9,
+            "line": 11,
             "name": "I want to click on \"Login\" button",
             "match": {
               "arguments": [
@@ -63,10 +85,10 @@
           },
           {
             "result": {
-              "duration": 1432042053,
+              "duration": 801036308,
               "status": "passed"
             },
-            "line": 10,
+            "line": 12,
             "name": "I validate \"Enter Time-Track\" Text",
             "match": {
               "arguments": [
@@ -81,10 +103,10 @@
           },
           {
             "result": {
-              "duration": 5473773667,
+              "duration": 5532166635,
               "status": "passed"
             },
-            "line": 11,
+            "line": 13,
             "name": "I validate \"Create New Tasks\" Textfield",
             "match": {
               "arguments": [
@@ -99,10 +121,13 @@
           },
           {
             "result": {
-              "duration": 795852022,
+              "duration": 846891372,
               "status": "passed"
             },
-            "line": 12,
+            "output": [
+              "Finished Scenario"
+            ],
+            "line": 14,
             "name": "I logout the application",
             "match": {
               "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_logout_the_application()"
@@ -112,11 +137,11 @@
         ],
         "tags": [
           {
-            "line": 4,
+            "line": 6,
             "name": "@SmokeTest"
           },
           {
-            "line": 4,
+            "line": 6,
             "name": "@RegrassionTest"
           }
         ]

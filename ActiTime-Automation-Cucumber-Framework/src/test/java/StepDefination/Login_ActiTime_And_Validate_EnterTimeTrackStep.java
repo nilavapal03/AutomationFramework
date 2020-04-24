@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import Extensibility.AppMethods;
 import GenericUtils.CommonUtils;
 import GenericUtils.Driver;
@@ -22,6 +22,9 @@ import PageObjects.EnterTimeTrackPage;
 import PageObjects.LoginPage;
 import PageObjects.LogoutPage;
 import cucumber.api.DataTable;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -36,13 +39,12 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	LoginPage login;
 	EnterTimeTrackPage enterTimeTrackPage;
 	LogoutPage logoutPage;
+	Scenario scenario;
 	// ==========================End of object creation===================================================//
 	
 	String filePath = "C:\\Users\\Admin\\ActiTime-Automation-Cucumber-Framework\\resourceLib\\testData\\TestData.xlsx";
 
-	{
-
-		try {
+	{try {
 			PropertyConfigurator.configure("./resourceLib/configuration/log4j.properties");
 			logger.info("INFO Msg:===============> Loading peropeties file");
 			prop.load(new FileInputStream(new File("./resourceLib/configuration/configFile.properties")));
@@ -52,12 +54,36 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 		}
 	}
 
+	//Setup method where Browser should launch
+	@Before()
+	public void setUp(Scenario scenario) {
+		this.scenario=scenario;
+		try {
+		logger.info("INFO Msg:===============>Launch the Browser");
+		Driver.driver=Driver.selectBrowser(prop.getProperty("Browser"));
+		logger.info("Executing Scenario :"+scenario.getName());
+		
+		}catch (Exception e) {
+			logger.error("ERROR Msg:=============>Error While launcing browser ");
+		}
+	}
+
+	//tear down method where browser should close
+	@After
+	public void tearDown(Scenario scenario) {
+		scenario.write("Finished Scenario");
+		if(scenario.isFailed()) {
+			scenario.embed(((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.BYTES), "./report/screenshots/png");
+		}
+		logger.info("Test Enviourment closed");
+		Driver.driver.quit();
+	}
+
+	
 	@Given("^I want Login to the application$")
 	public void i_want_Login_to_the_application() throws Throwable {
 			try {
 			logger.info("INFO Msg:===============>Launch AtiTime application");
-			Driver.selectBrowser(prop.getProperty("Browser"));
-			commonUtils.implicitWait(3);
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
 		} catch (Exception e) {
 			logger.error("ERROR Msg:=============>Error While launcing ActiTime application"+e);
