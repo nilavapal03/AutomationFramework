@@ -14,10 +14,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.gherkin.model.Feature;
+
 import Extensibility.AppMethods;
 import GenericUtils.CommonUtils;
 import GenericUtils.Driver;
 import GenericUtils.ReadExcel;
+import GenericUtils.Report;
 import PageObjects.EnterTimeTrackPage;
 import PageObjects.LoginPage;
 import PageObjects.LogoutPage;
@@ -29,7 +35,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
+public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 
 	public static Logger logger = Logger.getLogger(Login_ActiTime_And_Validate_EnterTimeTrackStep.class);
 	// ==========================Start object creation here================================================//
@@ -40,6 +46,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	EnterTimeTrackPage enterTimeTrackPage;
 	LogoutPage logoutPage;
 	Scenario scenario;
+	ExtentTest loginInfo;
 	// ==========================End of object creation===================================================//
 	
 	String filePath = "C:\\Users\\Admin\\ActiTime-Automation-Cucumber-Framework\\resourceLib\\testData\\TestData.xlsx";
@@ -58,6 +65,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	@Before()
 	public void setUp(Scenario scenario) {
 		this.scenario=scenario;
+		Report.setReport();
 		try {
 		logger.info("INFO Msg:===============>Launch the Browser");
 		Driver.driver=Driver.selectBrowser(prop.getProperty("Browser"));
@@ -72,6 +80,8 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	@After
 	public void tearDown(Scenario scenario) {
 		scenario.write("Finished Scenario");
+		Report.endReport();
+		
 		if(scenario.isFailed()) {
 			scenario.embed(((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.BYTES), "./report/screenshots/png");
 		}
@@ -82,24 +92,31 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	
 	@Given("^I want Login to the application$")
 	public void i_want_Login_to_the_application() throws Throwable {
+		Report.createReport("Login to ActiTime", "Login to ActiTime Application and Validate Enter Time-Track heading should be available");
+		loginInfo=Report.createTesteport("Given", "I want Login to the application");
 			try {
-			logger.info("INFO Msg:===============>Launch AtiTime application");
+			loginInfo.info("INFO Msg:===============>Launch AtiTime application");
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
+			loginInfo.info("AtiTime application launch properly");
 		} catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error While launcing ActiTime application"+e);
+			Report.tesepHandelStep("FAIL", loginInfo, e);
+			loginInfo.error("ERROR Msg:=============>Error While launcing ActiTime application"+e);
 		}
 	}
 
 	@Then("^I Provide valid userName and passWord$")
 	public void i_Provide_valid_userName_and_passWord(DataTable dt) throws Throwable {
 		login = new LoginPage();
+		loginInfo=Report.createTesteport("Then", "I Provide valid userName and passWord");
 		try {
-			logger.info("INFO Msg:===============>Entering valid userName and passWord");
-		List<String> list = dt.asList(String.class);
-		login.credentials(list.get(0), list.get(1));
+		loginInfo.info("INFO Msg:===============>Entering valid userName and passWord");
+			List<String> list = dt.asList(String.class);
+			login.credentials(list.get(0), list.get(1));
+		loginInfo.pass("Enter valid userName and passWord sucessfully");
 		commonUtils.implicitWait(3);
 		}catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error While entering userName and passWord"+e);
+			Report.tesepHandelStep("FAIL", loginInfo, e);
+			loginInfo.error("ERROR Msg:=============>Error While entering userName and passWord"+e);
 		}
 
 	}
@@ -107,19 +124,23 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	@Then("^I want to click on \"([^\"]*)\" button$")
 	public void i_want_to_click_on_Login_button(String Login) throws Throwable {
 		login = new LoginPage();
+		loginInfo=Report.createTesteport("Then", "I want to click on "+Login+ "button");
 		try {
-			logger.info("INFO Msg:===============>clicking on LoginButton");
+			loginInfo.info("INFO Msg:===============>clicking on Login button");
 		String value = login.loginText();
 		
 		if (Login.equals(value)) {
-			logger.debug("Value is ==============>"+value);
+			loginInfo.debug("Login button value is ==============>"+value);
 			login.clickOnLoginButton();
 			commonUtils.implicitWait(3);
+			loginInfo.pass("Successfully click on Login button");
 		} else {
-			logger.error("ERROR Msg:=============>Expected value ::"+Login+" and Actual value ::"+value+" is Not match");
+			
+			loginInfo.error("ERROR Msg:=============>Expected value ::"+Login+" and Actual value ::"+value+" is Not match");
 		}
 		}catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error while click on login button"+e);
+			Report.tesepHandelStep("FAIL", loginInfo, e);
+			loginInfo.error("ERROR Msg:=============>Error while click on login button"+e);
 		}
 
 	}
@@ -127,54 +148,49 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep {
 	@And("^I validate \"([^\"]*)\" Text$")
 	public void i_validate_Text(String expectedText) throws Throwable {
 		enterTimeTrackPage= new EnterTimeTrackPage();
+		loginInfo=Report.createTesteport("And", "I validate "+ expectedText+" Text");
 		try {
-			logger.info("INFO Msg:==============>Verifing Enter Time-Track text value in Enter Time-Track page and click on New link");
+			
+			loginInfo.info("INFO Msg:==============>Verifing Enter Time-Track text value in Enter Time-Track page and click on New link");
 			commonUtils.implicitWait(3);
 		String pageTitle_text = enterTimeTrackPage.verifyEnterTimeTrackText();
 			if (pageTitle_text.equalsIgnoreCase(expectedText)) {
-				logger.debug("Page titile is ==============>"+pageTitle_text);
+				loginInfo.debug("Page titile is ==============>"+pageTitle_text);
 			enterTimeTrackPage.clickOnNewLink();
+			loginInfo.pass("Successfully verified Enter Time-Track text value in Enter Time-Track page");
 			commonUtils.implicitWait(3);
 		}else {
-			logger.error("ERROR Msg:=============>Expected value ::"+expectedText+" and Actual value ::"+pageTitle_text+" is Not match");
+			loginInfo.error("ERROR Msg:=============>Expected value ::"+expectedText+" and Actual value ::"+pageTitle_text+" is Not match");
 		}
 		}catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error while entering Enter Time-Track page");
+			Report.tesepHandelStep("FAIL", loginInfo, e);
+			loginInfo.error("ERROR Msg:=============>Error while entering Enter Time-Track page");
 		}
 	}
 	
 	@And("^I validate \"([^\"]*)\" Textfield$")
-	public void i_validate_Textfield(String expectedText) {
+	public void i_validate_Textfield(String expectedText) throws Throwable{
 		enterTimeTrackPage= new EnterTimeTrackPage();
 		commonUtils.implicitWait(3);
+		loginInfo=Report.createTesteport("And", "I validate "+ expectedText+" Text");
 		try {
-			logger.info("INFO Msg:==============>Verifing Crate New Tasks value");
+			loginInfo.info("INFO Msg:==============>Verifing Crate New Tasks value");
 			String crateNewTaskText=enterTimeTrackPage.createNewTaskText();
 			if(expectedText.equalsIgnoreCase(crateNewTaskText)) {
 				Thread.sleep(5000);
-			logger.debug("Actual value is =================>"+crateNewTaskText);	
+				loginInfo.debug("Actual value is =================>"+crateNewTaskText);	
 			enterTimeTrackPage.clickonCloseButton();
+			loginInfo.pass("Successfully verified Crate New Tasks text field");
 			commonUtils.implicitWait(3);
 			}else {
-				logger.error("ERROR Msg:=============>Expected value ::"+expectedText+" and Actual value ::"+crateNewTaskText+" is Not match");
+				loginInfo.error("ERROR Msg:=============>Expected value ::"+expectedText+" and Actual value ::"+crateNewTaskText+" is Not match");
 			}
 		}catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error while entering Create New Tasks page");
+			Report.tesepHandelStep("FAIL", loginInfo, e);
+			loginInfo.error("ERROR Msg:=============>Error while entering Create New Tasks page");
 		}
 	}
 	
-	@And("^I logout the application$")
-	public void i_logout_the_application() {
-		logoutPage=new LogoutPage();
-		commonUtils.implicitWait(3);
-		try {
-			logger.info("INFO Msg:==============>click on Logout");
-			logoutPage.clickonLogout();
-			commonUtils.implicitWait(3);
-			Driver.driver.quit();
-		}catch (Exception e) {
-			logger.error("ERROR Msg:=============>Error while click on logout");
-		}
-	}
+
 
 }

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 5226717118,
+              "duration": 24844058835,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 1675208,
+              "duration": 1135604206,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1371302474,
+              "duration": 1989797968,
               "status": "passed"
             },
             "line": 8,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 203534199,
+              "duration": 228922440,
               "status": "passed"
             },
             "line": 9,
@@ -67,7 +67,7 @@
           },
           {
             "result": {
-              "duration": 95377903,
+              "duration": 89479150,
               "status": "passed"
             },
             "line": 11,
@@ -85,7 +85,7 @@
           },
           {
             "result": {
-              "duration": 801036308,
+              "duration": 1035503827,
               "status": "passed"
             },
             "line": 12,
@@ -103,9 +103,12 @@
           },
           {
             "result": {
-              "duration": 5532166635,
+              "duration": 6023383044,
               "status": "passed"
             },
+            "output": [
+              "Finished Scenario"
+            ],
             "line": 13,
             "name": "I validate \"Create New Tasks\" Textfield",
             "match": {
@@ -116,21 +119,6 @@
                 }
               ],
               "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Textfield(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 846891372,
-              "status": "passed"
-            },
-            "output": [
-              "Finished Scenario"
-            ],
-            "line": 14,
-            "name": "I logout the application",
-            "match": {
-              "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_logout_the_application()"
             },
             "keyword": "And "
           }
