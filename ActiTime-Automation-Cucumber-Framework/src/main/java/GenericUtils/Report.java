@@ -3,7 +3,6 @@ import java.io.File;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.apache.logging.log4j.util.Timer.Status;
 import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,7 +15,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.Scenario;
 import GenericUtils.*;
-import org.apache.logging.log4j.util.Timer;
+
 
 
 public class Report {
