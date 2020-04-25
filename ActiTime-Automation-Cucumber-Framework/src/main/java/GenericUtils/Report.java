@@ -1,9 +1,10 @@
 package GenericUtils;
 import java.io.File;
+import java.sql.Timestamp;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.WebDriver;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
@@ -12,14 +13,13 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.vimalselvam.cucumber.listener.Reporter;
-import cucumber.api.Scenario;
 import GenericUtils.*;
 
 
 
 public class Report {
 
+	@SuppressWarnings("deprecation")
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
@@ -32,7 +32,7 @@ public class Report {
 	
 	@SuppressWarnings("deprecation")
 	public static void setReport() {
-		
+	
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"/report/extentReports/AutomationReport.html");
 		extent=new ExtentReports();
 		extent.attachReporter(htmlReporter);
