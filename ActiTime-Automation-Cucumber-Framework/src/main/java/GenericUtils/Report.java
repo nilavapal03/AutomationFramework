@@ -1,8 +1,10 @@
 package GenericUtils;
+import java.io.File;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.logging.log4j.util.Timer.Status;
 import org.openqa.selenium.WebDriver;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
@@ -11,20 +13,27 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
+import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.Scenario;
+import GenericUtils.*;
+import org.apache.logging.log4j.util.Timer;
+
 
 public class Report {
 
-	private static ExtentHtmlReporter htmlReporter;
+	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
+	public static Logger logger = Logger.getLogger(Report.class);
 	
-	
+	{
+		PropertyConfigurator.configure("./resourceLib/configuration/log4j.properties");
+	}
 	//this is for set Extent report method
 	
 	@SuppressWarnings("deprecation")
 	public static void setReport() {
+		
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"/report/extentReports/AutomationReport.html");
 		extent=new ExtentReports();
 		extent.attachReporter(htmlReporter);

@@ -168,8 +168,8 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 		}
 	}
 	
-	@And("^I validate \"([^\"]*)\" Textfield$")
-	public void i_validate_Textfield(String expectedText) throws Throwable{
+	@And("^validate \"([^\"]*)\" Textfield$")
+	public void validate_Textfield(String expectedText) throws Throwable{
 		enterTimeTrackPage= new EnterTimeTrackPage();
 		commonUtils.implicitWait(3);
 		loginInfo=Report.createTesteport("And", "I validate "+ expectedText+" Text");

@@ -10,5 +10,5 @@ Feature: Login to ActiTime Application and Validate Enter Time-Track heading sho
       | Admin | manager |
     Then I want to click on "Login" button
     And I validate "Enter Time-Track" Text
-    And I validate "Create New Tasks" Textfield
+    And validate "Create New Tasks" Textfield
     
