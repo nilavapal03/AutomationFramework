@@ -35,7 +35,7 @@ public class Report {
 	@SuppressWarnings("deprecation")
 	public static void setReport() {
 	String timeStamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-	htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"/report/extentReports/AutomationReport_"+timeStamp+".html");
+	htmlReporter=new ExtentHtmlReporter("./report/extentReports/AutomationReport_"+timeStamp+".html");
 		extent=new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		htmlReporter.config().setTheme(Theme.DARK);
@@ -74,10 +74,11 @@ public class Report {
 		
 	//flush the Extent report
 	public static void endReport() {
+		
+	if(extent!=null) {
 		extent.flush();
-//		if(extent!=null) {
-//			
-//		}
+			
+		}
 	}
 	
 	
