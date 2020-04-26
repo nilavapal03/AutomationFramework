@@ -74,9 +74,10 @@ public class Report {
 		
 	//flush the Extent report
 	public static void endReport() {
-		if(extent!=null) {
-			extent.flush();
-		}
+		extent.flush();
+//		if(extent!=null) {
+//			
+//		}
 	}
 	
 	
