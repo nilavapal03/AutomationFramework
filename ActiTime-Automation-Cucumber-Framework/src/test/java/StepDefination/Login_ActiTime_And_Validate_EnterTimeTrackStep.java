@@ -80,13 +80,14 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	@After
 	public void tearDown(Scenario scenario) {
 		scenario.write("Finished Scenario");
-		Report.endReport();
+		System.out.println("Hello this is checking msg==================================================");
 		
 		if(scenario.isFailed()) {
 			scenario.embed(((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.BYTES), "./report/screenshots/png");
 		}
 		logger.info("Test Enviourment closed");
 		Driver.driver.quit();
+		Report.endReport();
 	}
 
 	
