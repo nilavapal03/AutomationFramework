@@ -1,6 +1,8 @@
 package GenericUtils;
 import java.io.File;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -32,8 +34,8 @@ public class Report {
 	
 	@SuppressWarnings("deprecation")
 	public static void setReport() {
-	
-		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"/report/extentReports/AutomationReport.html");
+	String timeStamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"/report/extentReports/AutomationReport_"+timeStamp+".html");
 		extent=new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		htmlReporter.config().setTheme(Theme.DARK);
