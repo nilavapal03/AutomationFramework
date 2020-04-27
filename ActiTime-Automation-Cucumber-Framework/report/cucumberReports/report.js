@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 5479731920,
+  "duration": 5309060056,
   "status": "passed"
 });
 formatter.scenario({
@@ -72,14 +72,14 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
 });
 formatter.result({
-  "duration": 1303479846,
+  "duration": 1740976712,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_Provide_valid_userName_and_passWord(DataTable)"
 });
 formatter.result({
-  "duration": 251909970,
+  "duration": 324726644,
   "status": "passed"
 });
 formatter.match({
@@ -92,7 +92,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
 });
 formatter.result({
-  "duration": 97722562,
+  "duration": 100610362,
   "status": "passed"
 });
 formatter.match({
@@ -105,7 +105,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
 });
 formatter.result({
-  "duration": 1135670124,
+  "duration": 1923203326,
   "status": "passed"
 });
 formatter.match({
@@ -118,12 +118,12 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_Textfield(String)"
 });
 formatter.result({
-  "duration": 9192436934,
+  "duration": 6120706540,
   "status": "passed"
 });
 formatter.write("Finished Scenario");
 formatter.after({
-  "duration": 1397257932,
+  "duration": 1867825549,
   "status": "passed"
 });
 });

@@ -22,7 +22,6 @@ import com.aventstack.extentreports.gherkin.model.Feature;
 import Extensibility.AppMethods;
 import GenericUtils.CommonUtils;
 import GenericUtils.Driver;
-import GenericUtils.ReadExcel;
 import GenericUtils.Report;
 import PageObjects.EnterTimeTrackPage;
 import PageObjects.LoginPage;
@@ -41,7 +40,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	// ==========================Start object creation here================================================//
 	public Properties prop = new Properties();
 	CommonUtils commonUtils = new CommonUtils();
-	ReadExcel readExcel = new ReadExcel();
+	
 	LoginPage login;
 	EnterTimeTrackPage enterTimeTrackPage;
 	LogoutPage logoutPage;
