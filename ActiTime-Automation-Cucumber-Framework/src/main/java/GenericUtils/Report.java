@@ -21,10 +21,12 @@ import GenericUtils.*;
 
 public class Report {
 
+//	static Driver ldriver= new Driver();
 	@SuppressWarnings("deprecation")
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
+	
 	public static Logger logger = Logger.getLogger(Report.class);
 	
 	{

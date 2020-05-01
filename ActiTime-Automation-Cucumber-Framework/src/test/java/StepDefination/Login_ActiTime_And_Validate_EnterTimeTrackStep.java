@@ -3,6 +3,8 @@ package StepDefination;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -33,6 +35,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.runtime.StepDefinitionMatch;
 
 public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 
@@ -40,6 +43,8 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	// ==========================Start object creation here================================================//
 	public Properties prop = new Properties();
 	CommonUtils commonUtils = new CommonUtils();
+//	Driver ldriver= new Driver();
+	
 	
 	LoginPage login;
 	EnterTimeTrackPage enterTimeTrackPage;
@@ -61,15 +66,14 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	}
 
 	//Setup method where Browser should launch
-	@Before()
+	@Before() 
 	public void setUp(Scenario scenario) {
 		this.scenario=scenario;
 		Report.setReport();
 		try {
 		logger.info("INFO Msg:===============>Launch the Browser");
-		Driver.driver=Driver.selectBrowser(prop.getProperty("Browser"));
+		Driver.launchBrowser();
 		logger.info("Executing Scenario :"+scenario.getName());
-		
 		}catch (Exception e) {
 			logger.error("ERROR Msg:=============>Error While launcing browser ");
 		}
@@ -78,11 +82,13 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	//tear down method where browser should close
 	@After
 	public void tearDown(Scenario scenario) {
+		String timeStamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		scenario.write("Finished Scenario");
 		System.out.println("Hello this is checking msg==================================================");
 		
 		if(scenario.isFailed()) {
-			scenario.embed(((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.BYTES), "./report/screenshots/png");
+			
+			scenario.embed(((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.BYTES), "./report/screenshots/"+timeStamp+".png");
 		}
 		logger.info("Test Enviourment closed");
 		Driver.driver.quit();
@@ -92,10 +98,12 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	
 	@Given("^I want Login to the application$")
 	public void i_want_Login_to_the_application() throws Throwable {
+		
 		Report.createReport("Login to ActiTime Application and Validate Enter Time-Track heading should be available", "Login to ActiTime Application");
 		loginfo=Report.createTesteport("Given", "I want Login to the application");
 			try {
 			loginfo.info("INFO Msg:===============>Launch AtiTime application");
+			
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
 			loginfo.info("AtiTime application launch properly");
 		} catch (Exception e) {
@@ -107,7 +115,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	@And("^I Provide valid userName and passWord$")
 	public void i_Provide_valid_userName_and_passWord(DataTable dt) throws Throwable {
 		login = new LoginPage();
-		loginfo=Report.createTesteport("Then", "I Provide valid userName and passWord");
+		loginfo=Report.createTesteport("And", "I Provide valid userName and passWord");
 		try {
 		loginfo.info("INFO Msg:===============>Entering valid userName and passWord");
 			List<String> list = dt.asList(String.class);

@@ -13,7 +13,7 @@ import GenericUtils.Driver;
 
 public class LoginPage {
 	
-	
+	//Driver ldriver= new Driver();
 	public static Logger logger= Logger.getLogger(LoginPage.class);
 	
 	{

@@ -25,7 +25,9 @@ import org.openqa.selenium.interactions.Actions;
 public class CommonUtils {
 	String parentWindowId = null;
 	String childWindowId = null;
+	//Driver ldriver= new Driver();
 
+	
 	public static Logger log = Logger.getLogger(CommonUtils.class);
 	{
 		PropertyConfigurator.configure("./resourceLib/configuration/log4j.properties");
@@ -223,24 +225,24 @@ public class CommonUtils {
 		action.moveToElement(SrcElement).clickAndHold().moveToElement(DestElement).release().build().perform();
 	}
 	
-	public void downloadFile(String url) {
-		try {
-			log.info("INFO Msg:===============>downloading the file");
-		String downloadFilePath="./resourceLib/downLoads";
-		HashMap<Object, Object> chromePref=new HashMap<Object, Object>();
-		chromePref.put("profile.default_content_settings.popups", 0);
-		chromePref.put("download.default_directory", downloadFilePath);
-		ChromeOptions chromOption= new ChromeOptions();
-		chromOption.setExperimentalOption("prefs", chromePref);
-		Driver.selectBrowser("Chrome");
-		Driver.driver=new ChromeDriver(chromOption);
-		Driver.driver.get(url);
-		
-		
-		}catch (Exception e) {
-			log.error("ERROR Msg:=============>error while downloading the file"+e);
-		}
-		}
+//	public void downloadFile(String url) {
+//		try {
+//			log.info("INFO Msg:===============>downloading the file");
+//		String downloadFilePath="./resourceLib/downLoads";
+//		HashMap<Object, Object> chromePref=new HashMap<Object, Object>();
+//		chromePref.put("profile.default_content_settings.popups", 0);
+//		chromePref.put("download.default_directory", downloadFilePath);
+//		ChromeOptions chromOption= new ChromeOptions();
+//		chromOption.setExperimentalOption("prefs", chromePref);
+//		Driver.selectBrowser("Chrome");
+//		Driver.driver=new ChromeDriver(chromOption);
+//		Driver.driver.get(url);
+//		
+//		
+//		}catch (Exception e) {
+//			log.error("ERROR Msg:=============>error while downloading the file"+e);
+//		}
+//		}
 	
 	public String findFrames() {
 		String id="";
