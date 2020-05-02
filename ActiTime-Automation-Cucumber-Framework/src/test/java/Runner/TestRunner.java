@@ -19,7 +19,5 @@ tags= {"@SmokeTest"}, monochrome=true,plugin = ("json:target/cucumber-reports/Cu
 
 public class TestRunner {
 	public static  Logger logger= Logger.getLogger(TestRunner.class);
-	
-		
-}
+	}
 

@@ -21,7 +21,7 @@ public class Test {
 //		
 	@org.junit.Test
 	public void setUp() {
-		//Driver.launchBrowser();
+		Driver.launchBrowser();
 		Driver.driver.get("https://www.google.co.in/?gfe_rd=cr&ei=MzqTWKCwD7LY8gfU5J8I");
 	}
 
