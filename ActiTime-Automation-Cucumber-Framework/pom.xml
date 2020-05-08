@@ -221,8 +221,7 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-			<version>4.3.0</version>
-			<scope>test</scope>
+			<version>4.3.0</version>			
 		</dependency>
 
 		<!-- ############################## END APACHE POI POM DEPENDENCY ################################## -->
