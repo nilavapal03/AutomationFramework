@@ -115,11 +115,15 @@ public class Driver{
 			
 			default:
 				try {
-					logger.info("INFO Msg:=====================> Launching IE browser");
+					logger.info("INFO Msg:=====================> Launching Default Firefox browser");
+					if(browserName.equals("Firefox")) {
 					WebDriverManager.firefoxdriver().setup();
 					driver=new FirefoxDriver();
 					driver.manage().window().maximize();
 					driver.manage().deleteAllCookies();
+					}else {
+						logger.error("ERROR Msg:=====================> Error while executing firefox driver");
+					}
 					}catch (Exception e) {
 						logger.error("ERROR Msg:=====================> Error while launching Firefox browser"+e);
 						e.printStackTrace();

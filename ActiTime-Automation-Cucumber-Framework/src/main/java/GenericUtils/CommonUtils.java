@@ -21,6 +21,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.http.HttpResponse;
+
+import io.restassured.RestAssured;
 
 public class CommonUtils {
 	String parentWindowId = null;
@@ -281,5 +284,12 @@ public class CommonUtils {
 		
 	public void implicitWait(int i) {
 		Driver.driver.manage().timeouts().implicitlyWait(i*10, TimeUnit.SECONDS);
+	}
+	
+	
+	public int statusCode(String expression, String valueName) {
+		String url=Driver.driver.findElement(By.xpath(expression)).getAttribute(valueName);
+		return RestAssured.get(url).getStatusCode();
+		
 	}
 }
