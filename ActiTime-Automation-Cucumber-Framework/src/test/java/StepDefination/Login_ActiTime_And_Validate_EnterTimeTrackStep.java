@@ -116,14 +116,14 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 		}
 	}
 
-	@And("^I Provide valid (.+) and (.+)$")
-    public void i_provide_valid_and(String username, String password) throws Throwable {
+	@And("^I Provide valid userName and passWord$")
+    public void i_provide_valid_username_and_password(DataTable dt) throws Throwable {
 		login = new LoginPage();
 		loginfo=Report.createTesteport("And", "I Provide valid userName and passWord");
 		try {
 		loginfo.info("INFO Msg:===============>Entering valid userName and passWord");
-			
-		login.credentials(username,password);
+			List <List<String>>list=dt.asLists(String.class);
+			login.credentials(list.get(0).get(0),list.get(0).get(1));
 		loginfo.pass("Enter valid userName and passWord sucessfully");
 		commonUtils.implicitWait(3);
 		}catch (Exception e) {
