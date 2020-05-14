@@ -6,7 +6,7 @@ Feature: Login to ActiTime Application and Validate Enter Time-Track heading sho
   
     Given I want Login to the application
     And I Provide valid userName and passWord
-    |Admin|manager|
+    		|Admin|manager|
     Then I want to click on "Login" button
     And I validate "Enter Time-Track" Text
     And validate "Create New Tasks" Textfield
