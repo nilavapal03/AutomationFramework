@@ -292,4 +292,7 @@ public class CommonUtils {
 		return RestAssured.get(url).getStatusCode();
 		
 	}
+	public int urlStatusCode(String url) {
+		return RestAssured.get(url).getStatusCode();
+	}
 }

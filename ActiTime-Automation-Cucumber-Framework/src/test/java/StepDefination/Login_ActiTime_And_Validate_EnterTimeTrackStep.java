@@ -103,23 +103,27 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 		loginfo=Report.createTesteport("Given", "I want Login to the application");
 			try {
 			loginfo.info("INFO Msg:===============>Launch AtiTime application");
+			int statusCode=commonUtils.urlStatusCode(prop.getProperty("actiTime_URL"));
+			logger.info("INFO MSG:==================>URL status code is::"+statusCode);
 			
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
 			loginfo.info("AtiTime application launch properly");
+			
+			
 		} catch (Exception e) {
 			Report.tesepHandelStep("FAIL", loginfo, e);
 			loginfo.error("ERROR Msg:=============>Error While launcing ActiTime application"+e);
 		}
 	}
 
-	@And("^I Provide valid userName and passWord$")
-	public void i_Provide_valid_userName_and_passWord(DataTable dt) throws Throwable {
+	@And("^I Provide valid (.+) and (.+)$")
+    public void i_provide_valid_and(String username, String password) throws Throwable {
 		login = new LoginPage();
 		loginfo=Report.createTesteport("And", "I Provide valid userName and passWord");
 		try {
 		loginfo.info("INFO Msg:===============>Entering valid userName and passWord");
-			List<String> list = dt.asList(String.class);
-			login.credentials(list.get(0), list.get(1));
+			
+		login.credentials(username,password);
 		loginfo.pass("Enter valid userName and passWord sucessfully");
 		commonUtils.implicitWait(3);
 		}catch (Exception e) {
