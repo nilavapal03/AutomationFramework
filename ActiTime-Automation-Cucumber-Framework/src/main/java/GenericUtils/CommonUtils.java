@@ -295,4 +295,8 @@ public class CommonUtils {
 	public int urlStatusCode(String url) {
 		return RestAssured.get(url).getStatusCode();
 	}
+	
+	public void sleepTime(int i) throws InterruptedException {
+		Thread.sleep(i*1000);
+	}
 }
