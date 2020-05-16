@@ -25,6 +25,9 @@ public class LoginPage {
 		PageFactory.initElements(Driver.driver, this);
 	}
 	
+	
+	
+	
 	//locators are decleare here for login page
 	
 	@FindBy(how=How.ID, using= "username")
