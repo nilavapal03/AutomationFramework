@@ -27,4 +27,3 @@ Feature: Login to ActiTime Application and Validate Enter Time-Track heading sho
       |- New Customer -|MLBProject56 		 |Foundation  			 |SmokeTest  |RegressionTest |
       |- New Customer -|Q&EProject78     |OA2Project         |SanityTest |FunctionalTest |
       
- 

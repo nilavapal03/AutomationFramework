@@ -35,7 +35,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	
 	// ==========================Start object creation here================================================//
 	public Properties prop = new Properties();
-	CommonUtils commonUtils = new CommonUtils();
+	CommonUtils commonUtils=new CommonUtils();
 	LoginPage login;
 	EnterTimeTrackPage enterTimeTrackPage;
 	LogoutPage logoutPage;
@@ -91,17 +91,16 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 
 	@Given("^I want Login to the application$")
 	public void i_want_Login_to_the_application() throws Throwable {
-
+		
 		Report.createReport("Login to ActiTime Application and Validate Enter Time-Track heading should be available",
 				"Login to ActiTime Application");
 		loginfo = Report.createTesteport("Given", "I want Login to the application");
 		try {
 			loginfo.info("INFO Msg:===============>Launch AtiTime application");
-//			int statusCode = commonUtils.urlStatusCode(prop.getProperty("actiTime_URL"));
-//			logger.info("INFO MSG:==================>URL status code is::" + statusCode);
-
+			int statusCode=commonUtils.urlStatusCode(prop.getProperty("actiTime_URL"));
+			logger.info("INFO Msg:===============>Status code of the ActiTime URL is::"+statusCode);
+			loginfo.info("Status code of the ActiTime URL is:: "+statusCode);
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
-			
 			loginfo.info("AtiTime application launch properly");
 
 		} catch (Exception e) {
@@ -190,7 +189,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 			loginfo.info("INFO Msg:==============>Verifing Crate New Tasks value");
 			String crateNewTaskText = enterTimeTrackPage.createNewTaskText();
 			if (expectedText.equalsIgnoreCase(crateNewTaskText)) {
-				Thread.sleep(5000);
+				
 				loginfo.debug("Actual value is =================>" + crateNewTaskText);
 				
 				loginfo.pass("Successfully verified Crate New Tasks text field");
@@ -251,7 +250,7 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 			logger.info("INFO Msg:==============>Validating " + expectedText + " Text field");
 			String actualText = createNewTaskPage.verifySelectCustomerAndProjectToAddTasksforText();
 			System.out.println("Value is ==========> "+actualText);
-			loginfo.debug("ActualText Result is" + actualText);
+			loginfo.debug("ActualText Result is:: " + actualText);
 			if (expectedText.trim().equalsIgnoreCase(actualText)) {
 				
 				loginfo.pass("Successfully verified " + actualText + " Text filed");

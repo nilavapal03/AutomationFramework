@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5068897583,
+  "duration": 5190160409,
   "status": "passed"
 });
 formatter.scenario({
@@ -76,14 +76,14 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
 });
 formatter.result({
-  "duration": 2121978860,
+  "duration": 2281758335,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_provide_valid_username_and_password(DataTable)"
 });
 formatter.result({
-  "duration": 213582706,
+  "duration": 242872616,
   "status": "passed"
 });
 formatter.match({
@@ -96,7 +96,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
 });
 formatter.result({
-  "duration": 101114788,
+  "duration": 99660614,
   "status": "passed"
 });
 formatter.match({
@@ -109,7 +109,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
 });
 formatter.result({
-  "duration": 3449923778,
+  "duration": 928299067,
   "status": "passed"
 });
 formatter.match({
@@ -122,26 +122,26 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_Textfield(String)"
 });
 formatter.result({
-  "duration": 6570215576,
+  "duration": 716238822,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.click_on_close_task()"
 });
 formatter.result({
-  "duration": 111352026,
+  "duration": 71042529,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.logout_from_actitime_application()"
 });
 formatter.result({
-  "duration": 224651239,
+  "duration": 170915506,
   "status": "passed"
 });
 formatter.write("Finished Scenario");
 formatter.after({
-  "duration": 1334854216,
+  "duration": 1146217452,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -249,7 +249,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 3940238762,
+  "duration": 3752486187,
   "status": "passed"
 });
 formatter.scenario({
@@ -325,14 +325,14 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
 });
 formatter.result({
-  "duration": 411540153,
+  "duration": 1723226276,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_provide_valid_username_and_password(DataTable)"
 });
 formatter.result({
-  "duration": 148859753,
+  "duration": 149022380,
   "status": "passed"
 });
 formatter.match({
@@ -345,7 +345,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
 });
 formatter.result({
-  "duration": 104171946,
+  "duration": 92689739,
   "status": "passed"
 });
 formatter.match({
@@ -358,7 +358,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
 });
 formatter.result({
-  "duration": 941747013,
+  "duration": 1164119100,
   "status": "passed"
 });
 formatter.match({
@@ -371,7 +371,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_Textfield(String)"
 });
 formatter.result({
-  "duration": 5566637378,
+  "duration": 984108300,
   "status": "passed"
 });
 formatter.match({
@@ -384,7 +384,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_something_text(String)"
 });
 formatter.result({
-  "duration": 87572107,
+  "duration": 35528961,
   "status": "passed"
 });
 formatter.match({
@@ -413,16 +413,16 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.create_and(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 9718111406,
+  "duration": 9567883925,
   "status": "passed"
 });
 formatter.write("Finished Scenario");
 formatter.after({
-  "duration": 951573736,
+  "duration": 1105440598,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3737906954,
+  "duration": 3808415416,
   "status": "passed"
 });
 formatter.scenario({
@@ -498,14 +498,14 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_Login_to_the_application()"
 });
 formatter.result({
-  "duration": 1720137143,
+  "duration": 1142841748,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_provide_valid_username_and_password(DataTable)"
 });
 formatter.result({
-  "duration": 156170093,
+  "duration": 157833866,
   "status": "passed"
 });
 formatter.match({
@@ -518,7 +518,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_want_to_click_on_Login_button(String)"
 });
 formatter.result({
-  "duration": 97949474,
+  "duration": 100379806,
   "status": "passed"
 });
 formatter.match({
@@ -531,7 +531,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.i_validate_Text(String)"
 });
 formatter.result({
-  "duration": 1082445791,
+  "duration": 900031500,
   "status": "passed"
 });
 formatter.match({
@@ -544,7 +544,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_Textfield(String)"
 });
 formatter.result({
-  "duration": 6323533452,
+  "duration": 480627205,
   "status": "passed"
 });
 formatter.match({
@@ -557,7 +557,7 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.validate_something_text(String)"
 });
 formatter.result({
-  "duration": 40391601,
+  "duration": 33967817,
   "status": "passed"
 });
 formatter.match({
@@ -586,12 +586,12 @@ formatter.match({
   "location": "Login_ActiTime_And_Validate_EnterTimeTrackStep.create_and(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 9652248088,
+  "duration": 9559852024,
   "status": "passed"
 });
 formatter.write("Finished Scenario");
 formatter.after({
-  "duration": 796234149,
+  "duration": 1067010000,
   "status": "passed"
 });
 });
