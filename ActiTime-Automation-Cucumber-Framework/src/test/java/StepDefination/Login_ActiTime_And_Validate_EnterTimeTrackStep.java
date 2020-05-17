@@ -6,22 +6,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.GherkinKeyword;
-import com.aventstack.extentreports.gherkin.model.Feature;
-
-import Extensibility.AppMethods;
 import GenericUtils.CommonUtils;
 import GenericUtils.Driver;
 import GenericUtils.Report;
@@ -36,7 +26,8 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.runtime.StepDefinitionMatch;
+
+
 
 public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 
@@ -106,10 +97,11 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 		loginfo = Report.createTesteport("Given", "I want Login to the application");
 		try {
 			loginfo.info("INFO Msg:===============>Launch AtiTime application");
-			int statusCode = commonUtils.urlStatusCode(prop.getProperty("actiTime_URL"));
-			logger.info("INFO MSG:==================>URL status code is::" + statusCode);
+//			int statusCode = commonUtils.urlStatusCode(prop.getProperty("actiTime_URL"));
+//			logger.info("INFO MSG:==================>URL status code is::" + statusCode);
 
 			Driver.driver.get(prop.getProperty("actiTime_URL"));
+			
 			loginfo.info("AtiTime application launch properly");
 
 		} catch (Exception e) {

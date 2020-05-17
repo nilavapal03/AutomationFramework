@@ -61,6 +61,7 @@ public class Driver{
 			logger.info("INFO Msg:=====================> Launching Chrome browser");
 			if(browserName.equals("Chrome")) {
 			WebDriverManager.chromedriver().setup();
+			
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
