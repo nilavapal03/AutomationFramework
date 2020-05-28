@@ -208,12 +208,13 @@ public class Login_ActiTime_And_Validate_EnterTimeTrackStep extends Report {
 	@Then("^Click on close task$")
     public void click_on_close_task() throws Throwable {
 		enterTimeTrackPage = new EnterTimeTrackPage();
-		commonUtils.implicitWait(3);
+		commonUtils.implicitWait(4);
 		loginfo = Report.createTesteport("Then", "Click on close Tasks");
 		try {
 			logger.info("INFO Msg:==============>Click on close Tasks");
 			loginfo.info("INFO Msg:==============>Click on close Tasks");
 			enterTimeTrackPage.clickonCloseButton();
+			commonUtils.implicitWait(4);
 			loginfo.pass("Successfuly click on close Tasks button");
 		}catch (Exception e) {
 			Report.tesepHandelStep("FAIL", loginfo, e);

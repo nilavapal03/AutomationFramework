@@ -1,6 +1,6 @@
 Feature: Login to ActiTime Application and Validate Enter Time-Track heading should be available
 
-  @SmokeTest @RegrassionTest
+  @SmokeTest @RegrassionTest  @FunctionalTest
   Scenario: Login to ActiTime Application
     Given I want Login to the application
     And I Provide valid userName and passWord
@@ -11,7 +11,7 @@ Feature: Login to ActiTime Application and Validate Enter Time-Track heading sho
     Then Click on close task
     And Logout from ActiTime application
 
-  @FunctionalTest @FunctionalTest
+  @FunctionalTest
   Scenario Outline: Select four Customer and  four Project to Add Tasks for
     Given I want Login to the application
     And I Provide valid userName and passWord

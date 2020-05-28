@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features="./resourceLib/Features", glue= {"StepDefination"},
 format= { "pretty","html:report/cucumberReports", "json:target/cucumberReports/cucumber.json"
 		,"junit:target/cucumberReports/cucumber.xml"},
-tags= {"@SmokeTest"}, monochrome=true,plugin = ("json:target/cucumber-reports/CucumberTestReport.json"))
+tags= {"@FunctionalTest"}, monochrome=true,plugin = ("json:target/cucumber-reports/CucumberTestReport.json"))
 
 
 
